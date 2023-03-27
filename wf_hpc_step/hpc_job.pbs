@@ -1,0 +1,20 @@
+#!/bin/bash
+# Exercise 1 submission script - submit.sh
+# Below, is the queue
+#PBS -q normal
+#PBS -j oe
+#PBS -l select=1:ncpus=4:ngpus=1:mem=1G
+#PBS -l walltime=00:10:00
+#PBS -P 21126683
+#PBS -N linear_program
+
+# Commands start here
+cd ${PBS_O_WORKDIR}
+
+echo Allocated $NCPUS cores
+
+module load singularity
+#singularity exec /app/singularity/images/nscc/shchung/inc5654.img python linear.py
+
+singularity exec /home/users/industry/rolos/alexeyk/scratch/test/singularity/inc5654.img python linear.py
+

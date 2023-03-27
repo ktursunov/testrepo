@@ -1,0 +1,11 @@
+#!/bin/bash
+# Exercise 1 submission script - submit.sh
+# Below, is the queue
+#PBS -q normal
+#PBS -l select=1:ncpus=1:mem=100M
+#PBS -l walltime=00:1:00
+#PBS -P 21126683
+#PBS -N Sleep_Job
+#PBS -o submit.out
+echo sleep job for 1 seconds
+sleep 1

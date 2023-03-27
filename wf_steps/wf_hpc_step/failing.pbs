@@ -1,0 +1,11 @@
+#!/bin/bash
+#PBS -q normal
+#PBS -o myscript.out.txt
+#PBS -e myscript.err.txt
+#PBS -l mem=1g
+#PBS -l walltime=00:01:00
+#PBS -P 21126683
+#PBS -N failing_program
+
+sleep 30
+exit 1
